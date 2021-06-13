@@ -38,7 +38,7 @@ public class TrainerController
 	public Optional<Trainer> displayTrainerByEmail(@PathVariable String email){
 		return service.showTrainerByEmailId(email);
 	}
-	
+	 
 		
 	@PutMapping("/update")
 	public String updateTrainer(@RequestBody Trainer trainer) {

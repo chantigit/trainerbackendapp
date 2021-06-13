@@ -12,5 +12,5 @@ public interface TrainerService
 	Optional<Trainer> showTrainerByEmailId(String emailid);
 	void deleteTrainer(int id) ;
 	Trainer updateTrainer(Trainer trainer);
-	public boolean isTrainerExists(int id);
+	public boolean isTrainerExists(int id); 
 }

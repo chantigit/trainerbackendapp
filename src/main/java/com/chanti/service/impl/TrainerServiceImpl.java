@@ -55,5 +55,5 @@ public class TrainerServiceImpl implements TrainerService {
 		status = repo.existsById(id);
 
 		return status;
-	}
+	}  
 }
