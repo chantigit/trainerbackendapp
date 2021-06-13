@@ -39,4 +39,21 @@ public class TrainerController
 		return service.showTrainerByEmailId(email);
 	}
 	
+		
+	@PutMapping("/update")
+	public String updateTrainer(@RequestBody Trainer trainer) {
+		Trainer updateTrainer= service.updateTrainer(trainer);
+		return updateTrainer+ "Ur trainer record is updated";
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public ResponseEntity<Object> deleteTrainer(@PathVariable int id) throws Exception {
+		boolean trainerExists = service.isTrainerExists(id);
+		if(trainerExists) {
+           service.deleteTrainer(id);
+           return new ResponseEntity<>("Employee deleted successfully",HttpStatus.OK);
+		}else {
+		return null;
+		}
+	}
 }
