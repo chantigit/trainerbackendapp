@@ -13,8 +13,8 @@ import lombok.ToString;
 @Entity
 @Table(name="trainers")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 @ToString
 public class Trainer 
 {
@@ -69,6 +69,14 @@ public class Trainer
 	public String toString() {
 		return "Trainer [id=" + id + ", name=" + name + ", email=" + email + ", exp=" + exp + ", domain=" + domain
 				+ "]";
+	}
+	//For testing @Tharun created this constructor 
+	public Trainer(String name, String email, int exp, String domain) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.exp = exp;
+		this.domain = domain;
 	}
 	
 }
