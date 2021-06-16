@@ -10,4 +10,7 @@ public interface TrainerService
 	Trainer saveTrainer(Trainer entity);
 	List<Trainer> showAllTrainers();
 	Optional<Trainer> showTrainerByEmailId(String emailid);
+	void deleteTrainer(int id) ;
+	Trainer updateTrainer(Trainer trainer);
+	public boolean isTrainerExists(int id); 
 }
